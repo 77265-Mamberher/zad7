@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6e6;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+main, header, footer {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 0; 
+    border: 4px solid #b30000;
+    box-shadow: 10px 10px 0 #ff9999; 
+}
+
+h1, h2, h3 {
+    color: #b30000;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 8px solid #b30000;
+}
+
+h2 {
+    border-bottom: 3px solid #b30000;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.profile-img {
+    width: 180px;
+    border-radius: 0; 
+    border: 5px solid #b30000;
+    margin-top: 15px;
+}
+
+a {
+    color: #cc0000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+article {
+    background-color: #ffcccc;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-left: 6px solid #b30000;
+}
+
+.copy-btn {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.copy-btn:hover {
+    background-color: #800000;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+}

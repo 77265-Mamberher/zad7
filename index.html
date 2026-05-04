@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semen Mamberher - CV</title>
+    <link id="theme-style" rel="stylesheet" href="red.css">
+    <style>
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; font-family: inherit; }
+        .error-message { color: #d32f2f; font-size: 0.85em; display: block; margin-top: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button id="theme-toggle-btn" style="padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">Zmień motyw na Zielony</button>
+    </div>
+
+    <header>
+        <h1>Semen Mamberher - CV</h1>
+        <img src="1.jpg" alt="Zdjęcie profilowe Semena Mamberhera" class="profile-img">
+    </header>
+
+    <main>
+        <section>
+            <h2>Kontakt</h2>
+            <ul>
+                <li>
+                    E-mail: <a href="mailto:s.m@example.com">s.m@example.com</a> 
+                    <button class="copy-btn" onclick="copyToClipboard('s.m@example.com', this)">Kopiuj</button>
+                </li>
+                <li>
+                    Telefon: <a href="tel:+48123456789">+48 123 456 789</a> 
+                    <button class="copy-btn" onclick="copyToClipboard('+48123456789', this)">Kopiuj</button>
+                </li>
+                <li>Miasto: Warszawa</li>
+            </ul>
+            
+            <p>Profile zewnętrzne:</p>
+            <ul>
+                <li><a href="https://github.com/77265_Mamberher" target="_blank" rel="noopener noreferrer">Mój profil GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/example/" target="_blank" rel="noopener noreferrer">Mój profil LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>O mnie</h2>
+            <p>Jestem studentem informatyki z pasją do programowania. Posiadam już doświadczenie w tworzeniu aplikacji okienkowych w języku C# (Windows Forms) oraz uczę się technologii webowych (HTML, CSS). Zawsze chętnie podejmuję nowe wyzwania algorytmiczne i logiczne.</p>
+        </section>
+
+        <section>
+            <h2>Umiejętności</h2>
+            <ul id="skills-list">
+            </ul>
+        </section>
+
+        <section>
+            <h2>Doświadczenie</h2>
+            <article>
+                <h3>Twórca Aplikacji Uczelnianych - Projekt studencki</h3>
+                <p><strong>Okres:</strong> 2025</p>
+                <p>Samodzielne zaprojektowanie i napisanie rozbudowanego symulatora Bankomatu oraz Automatu Vendingowego. Zarządzanie stanem konta, wirtualną walutą oraz generowanie paragonów (GDI+).</p>
+            </article>
+
+            <article>
+                <h3>Praktykant IT / Pomoc techniczna (Freelance)</h3>
+                <p><strong>Okres:</strong> 2024</p>
+                <p>Diagnozowanie prostych problemów sprzętowych i programowych. Konfiguracja środowisk roboczych oraz pomoc w utrzymaniu systemów operacyjnych Windows.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Edukacja</h2>
+            <p>Obecnie: Studia inżynierskie na kierunku Informatyka (I rok). Rozwój kompetencji w zakresie programowania i technologii internetowych.</p>
+        </section>
+
+        <section>
+            <h2>
+                Projekty
+                <button id="toggle-projects-btn" class="copy-btn" style="font-size: 14px; margin-left: 20px;">Ukryj sekcję</button>
+            </h2>
+            
+            <div id="projects-content">
+                <ul id="projects-list">
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Notatki (Local Storage)</h2>
+            <div class="form-group" style="display: flex; gap: 10px;">
+                <input type="text" id="note-input" placeholder="Wpisz nową notatkę..." style="flex-grow: 1;">
+                <button id="add-note-btn" class="copy-btn" style="margin: 0;">Dodaj</button>
+            </div>
+            <ul id="notes-list" style="list-style-type: none; padding: 0;">
+            </ul>
+        </section>
+
+        <section>
+            <h2>Formularz kontaktowy</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="firstName">Imię:</label>
+                    <input type="text" id="firstName" name="firstName">
+                    <span class="error-message" id="error-firstName"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Nazwisko:</label>
+                    <input type="text" id="lastName" name="lastName">
+                    <span class="error-message" id="error-lastName"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error-message" id="error-email"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Wiadomość:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                    <span class="error-message" id="error-message"></span>
+                </div>
+                <button type="submit" class="copy-btn" style="margin-left: 0;">Wyślij wiadomość</button>
+                <div id="success-message" style="color: #2e8b57; margin-top: 15px; display: none; font-weight: bold;">Wiadomość została wysłana!</div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2026 Semen Mamberher. Zadanie 7 - Local Storage.</p>
+    </footer>
+
+    <script>
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(function() {
+                var originalText = btn.innerText;
+                btn.innerText = "Skopiowano!";
+                setTimeout(function() {
+                    btn.innerText = originalText;
+                }, 1500);
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

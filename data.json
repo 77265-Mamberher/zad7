@@ -1,0 +1,13 @@
+{
+  "skills": [
+    "Programowanie obiektowe w C#",
+    "Tworzenie interfejsów Windows Forms",
+    "Podstawy HTML5 i CSS3",
+    "Operacje na systemach plików i algorytmika",
+    "Korzystanie z systemu kontroli wersji (Git/GitHub)"
+  ],
+  "projects": [
+    "<strong>Symulator Bankomatu (C#)</strong> – Aplikacja desktopowa z autorskim algorytmem zachłannym do wydawania reszty i zapisem stanu do plików tekstowych.",
+    "<strong>Interaktywne CV (HTML/CSS)</strong> – W pełni semantyczna strona WWW ostylowana w odcieniach zieleni, z funkcją kopiowania."
+  ]
+}
